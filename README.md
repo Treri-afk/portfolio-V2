@@ -35,6 +35,7 @@ portfolio V2/
 │     ├─ features/               interactions : filtre par techno, contact, thème
 │     ├─ entities/               modèle métier : project, technology
 │     └─ shared/                 ui (design system), lib, api, config, content (textes et Markdown)
+├─ apps/api/                     Hono · formulaire de contact → e-mail (Gmail SMTP)
 ├─ packages/tokens/              tokens DTCG → tokens.css, custom-media.css, media.ts, favicon.svg
 ├─ packages/contracts/           schémas Zod et types partagés (web, puis API)
 └─ docs/adr/                     décisions d'architecture
@@ -102,6 +103,7 @@ Le développement est assisté par l'IA (Claude Code), avec un cadre écrit avan
 | Commande | Rôle |
 |---|---|
 | `npm run dev` | tokens, images, puis serveur de développement (variables validées au démarrage) |
+| `npm run dev:api` | API de contact en local (copier `apps/api/.env.example` en `.env`) |
 | `npm run build` | build de production et pré-rendu |
 | `npm run preview` | sert le build (tester les pages avec un `/` final) |
 | `npm run tokens:build` | compile les tokens |
@@ -109,14 +111,15 @@ Le développement est assisté par l'IA (Claude Code), avec un cadre écrit avan
 | `npm run lint` | ESLint + Stylelint |
 | `npm run test` | Vitest |
 | `npm run check` | lint, typecheck, tests et build : le gate de la CI |
+| `./deploy/deploy.sh` | déploiement sur le VPS : site statique + API de contact dans Docker, `--nginx` pour la config (ADR 0008) |
 
 ## État
 
 | Fait | À venir |
 |---|---|
-| Design system, pages, études de cas, pages légales | API Hono + PostgreSQL pour le formulaire de contact |
-| Pré-rendu, SEO, thèmes clair et sombre | Tests Playwright + axe, Lighthouse CI |
-| Passe de performance, lint bloquant, tests Vitest, CI | Docker, mise en ligne |
+| Design system, pages, études de cas, pages légales, API de contact (Hono → Gmail), en ligne sur paulabraham.fr | CSP, Tests Playwright + axe |
+| Pré-rendu, SEO, thèmes clair et sombre | Lighthouse CI |
+| Passe de performance, lint bloquant, tests Vitest, CI | Docker, PostgreSQL |
 
 ## Contenus
 

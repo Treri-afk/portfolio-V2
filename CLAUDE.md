@@ -3,7 +3,7 @@
 Portfolio premium orienté preuves d'expertise. Les projets sont le produit ; le design les sert ; le code est lui-même une preuve.
 
 ## Stack
-> Périmètre actuel (ADR 0001, 0006) : npm workspaces, front seul, lint + tests + CI en place. Docker, API et base restent la cible.
+> Périmètre actuel (ADR 0001, 0006, 0007) : npm workspaces, front + API de contact (Hono, envoi Gmail, sans base), lint + tests + CI en place. Docker et base restent la cible.
 
 - Monorepo pnpm :
   - `apps/web` — React 19 + Vite + TypeScript + React Router v7 (framework mode, pré-rendu)
@@ -19,6 +19,7 @@ Portfolio premium orienté preuves d'expertise. Les projets sont le produit ; le
 | Commande | Rôle |
 |---|---|
 | `npm run dev` | build des tokens puis serveur de dev du front (http://localhost:5173) |
+| `npm run dev:api` | API de contact en local (`apps/api/.env`, http://127.0.0.1:3000) |
 | `npm run build` | build de production + pré-rendu de toutes les pages |
 | `npm run preview` | sert le build pré-rendu |
 | `npm run tokens:build` | JSON DTCG → `tokens.css`, `custom-media.css`, `media.ts`, `favicon.svg` |
@@ -27,6 +28,7 @@ Portfolio premium orienté preuves d'expertise. Les projets sont le produit ; le
 | `npm run lint` | ESLint (règles du projet, FSD) + Stylelint (zéro valeur en dur) |
 | `npm run test` | Vitest : tokens (angles, contraste AA, alias), contrats, logique et composants |
 | `npm run check` | gate complet : lint, typecheck, tests, build |
+| `./deploy/deploy.sh [--nginx]` | déploiement sur le VPS (ADR 0008) : check, build, site, API Docker, nginx |
 
 CI GitHub Actions : lint + typecheck, tests, build (ADR 0006). Docker, API et base : prévus.
 

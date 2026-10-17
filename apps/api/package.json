@@ -1,0 +1,23 @@
+{
+  "name": "@portfolio/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/server.ts",
+    "start": "node src/server.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/nodemailer": "8.0.2",
+    "typescript": "6.0.3"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.1.4",
+    "@portfolio/contracts": "0.0.0",
+    "hono": "4.13.13",
+    "nodemailer": "10.0.16",
+    "zod": "4.6.7"
+  }
+}

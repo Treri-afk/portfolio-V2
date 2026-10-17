@@ -11,6 +11,7 @@
   },
   "scripts": {
     "dev": "npm run tokens:build && npm run dev -w @portfolio/web",
+    "dev:api": "npm run dev -w @portfolio/api",
     "build": "npm run tokens:build && npm run build -w @portfolio/web",
     "preview": "npm run preview -w @portfolio/web",
     "tokens:build": "npm run build -w @portfolio/tokens",

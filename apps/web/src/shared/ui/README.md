@@ -16,7 +16,7 @@ Une ligne par composant. Avant d'en créer un : chercher ici, puis ajouter une v
 | LinkList | liste de liens d'action avec icône (contact, profils) | `direction` : row · column |
 | SectionHeading | surtitre + titre de section (h2) avec id | — |
 | Button | bouton natif, styles partagés avec Link (`action/`) | `variant` : primary · secondary · ghost |
-| Media | image cadrée, point focal, priorité LCP, nom de transition, révélation au scroll | `ratio` : square · portrait · landscape · naturel |
+| Media | image cadrée, point focal, priorité LCP, nom de transition, révélation au scroll, `animation` : clip MP4 (`Clip`) joué une fois à l'entrée dans l'écran, dernière image si mouvement réduit | `ratio` : square · portrait · landscape · naturel |
 | TagList / TagGroup | étiquettes statiques / sélection multiple accessible | — |
 | Metric | chiffre clé, unité, libellé, source | `size` : md · lg |
 | FactList | liste terme/description `<dl>` (fiche projet, défi/décision) | `variant` : sheet · decision |

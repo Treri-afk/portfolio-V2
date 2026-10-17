@@ -1,4 +1,5 @@
 import { contactLimits as limits } from '@portfolio/contracts/constants';
+import { privacyPolicy } from './legal-links.ts';
 
 const count = (value: number): string => value.toLocaleString('fr-FR');
 
@@ -15,6 +16,8 @@ export const contact = {
     messageHint: `${count(limits.message.min)} caractères minimum.`,
     honeypot: 'Ne pas remplir ce champ',
     submit: 'Envoyer',
+    privacy: 'Vos nom, e-mail et message servent uniquement à vous répondre.',
+    privacyLink: { to: privacyPolicy.to, label: 'Politique de confidentialité' },
     pending: 'Envoi…',
     success: 'Message envoyé. Merci, je reviens vers vous rapidement.',
     invalid: 'Vérifiez les champs signalés.',

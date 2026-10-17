@@ -18,13 +18,15 @@ const dailyLimiter: RateLimiter = {
 };
 
 const env = envSchema.parse(process.env);
+// No nginx on the dev server: one shared key there. Production origins are https, never localhost.
+const isLocal = new URL(env.ALLOWED_ORIGIN).hostname === 'localhost';
 const app = createApp({
   allowedOrigin: env.ALLOWED_ORIGIN,
   to: env.CONTACT_TO,
   send: gmailSender(env.SMTP_USER, env.SMTP_PASS),
   clientLimiter: createRateLimiter(CLIENT_LIMIT, CLIENT_WINDOW_MS),
   dailyLimiter,
-  clientKey,
+  clientKey: isLocal ? (c) => clientKey(c) ?? 'localhost' : clientKey,
 });
 
 // Loopback only: nginx is the single entry point (TLS, X-Real-IP).

@@ -48,18 +48,24 @@ metrics:
   # TODO(metric): joueurs inscrits et sets réellement joués
 media:
   - kind: image
-    src: /media/arkade/phone-classement.jpg
+    src: /media/arkade/logo-motion.jpg
+    animation: /media/arkade/logo-motion.mp4
     width: 1080
-    height: 2341
-    alt: Classement d'ARKADE sur mobile, podium des trois meilleurs joueurs de la saison avec leurs badges de rang enflammés.
+    height: 1080
+    alt: Logo d'ARKADE, une pièce acide tranchée en biais au-dessus du titre ARKADE en jaune et rose.
     isCover: true
-    focalY: 72
   - kind: image
     src: /media/arkade/phone-accueil.jpg
     width: 1080
     height: 2341
     alt: Accueil d'ARKADE sur mobile avec le slogan « Insert coin. Climb. » et le bouton Lancer une partie.
     focalY: 22
+  - kind: image
+    src: /media/arkade/phone-classement.jpg
+    width: 1080
+    height: 2341
+    alt: Classement d'ARKADE sur mobile, podium des trois meilleurs joueurs de la saison avec leurs badges de rang enflammés.
+    focalY: 72
   - kind: image
     src: /media/arkade/match-trouve.jpg
     width: 1920

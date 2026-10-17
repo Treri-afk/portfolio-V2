@@ -40,4 +40,14 @@ describe('projectSchema', () => {
     const media = [{ kind: 'image', src: 'https://evil.example/a.jpg', width: 10, height: 10, alt: 'x' }];
     expect(projectSchema.safeParse({ ...valid, media }).success).toBe(false);
   });
+
+  it.each(['/media/demo/a.mp4', undefined])('accepts a self-hosted clip or none (%s)', (animation) => {
+    const media = [{ kind: 'image', src: '/media/demo/a.jpg', width: 10, height: 10, alt: 'x', ...(animation && { animation }) }];
+    expect(projectSchema.safeParse({ ...valid, media }).success).toBe(true);
+  });
+
+  it.each(['/media/demo/a.gif', 'https://evil.example/a.mp4'])('rejects the animation %s', (animation) => {
+    const media = [{ kind: 'image', src: '/media/demo/a.jpg', width: 10, height: 10, alt: 'x', animation }];
+    expect(projectSchema.safeParse({ ...valid, media }).success).toBe(false);
+  });
 });

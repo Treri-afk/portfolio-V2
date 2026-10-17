@@ -12,6 +12,8 @@ export interface MediaProps {
   /** Focal point in percent, used when the ratio crops the image. */
   focalX?: number | undefined;
   focalY?: number | undefined;
+  /** Short MP4 played once in place of the image; `src` (its last frame) stays the still for sharing. */
+  animation?: string | undefined;
   /** Rendered width preset (token): drives which variant the browser downloads. */
   sizes?: MediaSizes | undefined;
   /** Above-the-fold image (LCP): loaded eagerly with high priority. */

@@ -13,7 +13,7 @@ export function ProjectCover({ title, cover, ratio, sizes, priority, transitionN
       </div>
     );
   }
-  const { src, alt, width, height, focalX, focalY } = cover;
-  const media = { src, alt, width, height, focalX, focalY, ratio, sizes, priority, transitionName, reveal };
+  const { src, alt, width, height, animation, focalX, focalY } = cover;
+  const media = { src, alt, width, height, animation, focalX, focalY, ratio, sizes, priority, transitionName, reveal };
   return <Media {...media} />;
 }

@@ -1,0 +1,42 @@
+{
+  "angle": {
+    "slice": {
+      "fall-gentle": {
+        "$type": "other",
+        "$value": "{angle.cw.2}"
+      },
+      "fall-base": {
+        "$type": "other",
+        "$value": "{angle.cw.3}"
+      },
+      "fall-steep": {
+        "$type": "other",
+        "$value": "{angle.cw.4}"
+      },
+      "rise-gentle": {
+        "$type": "other",
+        "$value": "{angle.ccw.2}"
+      },
+      "rise-base": {
+        "$type": "other",
+        "$value": "{angle.ccw.3}"
+      },
+      "rise-steep": {
+        "$type": "other",
+        "$value": "{angle.ccw.4}"
+      }
+    },
+    "rule": {
+      "rise-base": {
+        "$type": "other",
+        "$value": "{angle.ccw.6}"
+      }
+    },
+    "transition": {
+      "page": {
+        "$type": "other",
+        "$value": "{angle.cw.8}"
+      }
+    }
+  }
+}

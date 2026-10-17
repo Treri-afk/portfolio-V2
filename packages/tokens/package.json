@@ -1,0 +1,18 @@
+{
+  "name": "@portfolio/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tokens.css": "./dist/tokens.css",
+    "./custom-media.css": "./dist/custom-media.css",
+    "./media": "./dist/media.ts",
+    "./favicon.svg": "./dist/favicon.svg"
+  },
+  "scripts": {
+    "build": "node build/build.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "5.7.0"
+  }
+}

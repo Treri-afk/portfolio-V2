@@ -1,0 +1,36 @@
+{
+  "responsive": {
+    "width": {
+      "sm": {
+        "$type": "number",
+        "$value": "{image.width.sm}"
+      },
+      "md": {
+        "$type": "number",
+        "$value": "{image.width.md}"
+      },
+      "lg": {
+        "$type": "number",
+        "$value": "{image.width.lg}"
+      }
+    },
+    "sizes": {
+      "full": {
+        "$type": "other",
+        "$value": "100vw"
+      },
+      "half": {
+        "$type": "other",
+        "$value": "(width >= {breakpoint.md}) 50vw, 100vw"
+      },
+      "third": {
+        "$type": "other",
+        "$value": "(width >= {breakpoint.lg}) 33vw, (width >= {breakpoint.sm}) 50vw, 100vw"
+      },
+      "quarter": {
+        "$type": "other",
+        "$value": "(width >= {breakpoint.lg}) 25vw, 50vw"
+      }
+    }
+  }
+}

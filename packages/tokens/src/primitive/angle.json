@@ -1,0 +1,20 @@
+{
+  "angle": {
+    "cw": {
+      "2": { "$type": "other", "$value": "2deg" },
+      "3": { "$type": "other", "$value": "3deg" },
+      "4": { "$type": "other", "$value": "4deg" },
+      "6": { "$type": "other", "$value": "6deg" },
+      "8": { "$type": "other", "$value": "8deg" },
+      "12": { "$type": "other", "$value": "12deg" }
+    },
+    "ccw": {
+      "2": { "$type": "other", "$value": "-2deg" },
+      "3": { "$type": "other", "$value": "-3deg" },
+      "4": { "$type": "other", "$value": "-4deg" },
+      "6": { "$type": "other", "$value": "-6deg" },
+      "8": { "$type": "other", "$value": "-8deg" },
+      "12": { "$type": "other", "$value": "-12deg" }
+    }
+  }
+}

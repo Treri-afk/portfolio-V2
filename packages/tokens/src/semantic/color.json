@@ -1,0 +1,135 @@
+{
+  "color": {
+    "surface": {
+      "base": {
+        "$type": "color",
+        "$value": "{color.neutral.25}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.950}"
+        }
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.900}"
+        }
+      },
+      "sunken": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.1000}"
+        }
+      },
+      "placeholder": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.800}"
+        }
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.950}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.25}"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.200}"
+        }
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.neutral.600}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.400}"
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.vermillon.700}",
+        "$extensions": {
+          "portfolio.dark": "{color.vermillon.400}"
+        }
+      },
+      "on-accent": {
+        "$type": "color",
+        "$value": "{color.neutral.0}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.1000}"
+        }
+      }
+    },
+    "line": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.800}"
+        }
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.500}"
+        }
+      },
+      "rule": {
+        "$type": "color",
+        "$value": "{color.neutral.950}",
+        "$extensions": {
+          "portfolio.dark": "{color.neutral.25}"
+        }
+      }
+    },
+    "accent": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.vermillon.600}",
+        "$extensions": {
+          "portfolio.dark": "{color.vermillon.400}"
+        }
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{color.vermillon.700}",
+        "$extensions": {
+          "portfolio.dark": "{color.vermillon.300}"
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$value": "{color.vermillon.600}",
+        "$extensions": {
+          "portfolio.dark": "{color.vermillon.400}"
+        }
+      }
+    },
+    "state": {
+      "success": {
+        "$type": "color",
+        "$value": "{color.green.700}",
+        "$extensions": {
+          "portfolio.dark": "{color.green.400}"
+        }
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{color.red.700}",
+        "$extensions": {
+          "portfolio.dark": "{color.red.400}"
+        }
+      }
+    }
+  }
+}

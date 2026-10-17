@@ -1,0 +1,146 @@
+{
+  "radius": {
+    "none": {
+      "$type": "dimension",
+      "$value": "0"
+    }
+  },
+  "border": {
+    "thin": {
+      "$type": "dimension",
+      "$value": "1px"
+    },
+    "medium": {
+      "$type": "dimension",
+      "$value": "2px"
+    },
+    "thick": {
+      "$type": "dimension",
+      "$value": "3px"
+    },
+    "heavy": {
+      "$type": "dimension",
+      "$value": "0.5rem"
+    },
+    "massive": {
+      "$type": "dimension",
+      "$value": "0.875rem"
+    }
+  },
+  "opacity": {
+    "disabled": {
+      "$type": "number",
+      "$value": "0.4"
+    },
+    "muted": {
+      "$type": "number",
+      "$value": "0.64"
+    },
+    "full": {
+      "$type": "number",
+      "$value": "1"
+    }
+  },
+  "z": {
+    "below": {
+      "$type": "number",
+      "$value": "-1"
+    },
+    "base": {
+      "$type": "number",
+      "$value": "0"
+    },
+    "raised": {
+      "$type": "number",
+      "$value": "1"
+    },
+    "overlap": {
+      "$type": "number",
+      "$value": "2"
+    },
+    "header": {
+      "$type": "number",
+      "$value": "10"
+    },
+    "skip-link": {
+      "$type": "number",
+      "$value": "20"
+    }
+  },
+  "ratio": {
+    "square": {
+      "$type": "other",
+      "$value": "1 / 1"
+    },
+    "portrait": {
+      "$type": "other",
+      "$value": "4 / 5"
+    },
+    "landscape": {
+      "$type": "other",
+      "$value": "5 / 4"
+    }
+  },
+  "breakpoint": {
+    "sm": {
+      "$type": "dimension",
+      "$value": "40rem"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "52rem"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "68rem"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "88rem"
+    }
+  },
+  "scale": {
+    "hover": {
+      "$type": "number",
+      "$value": "1.03"
+    },
+    "icon": {
+      "$type": "number",
+      "$value": "1.15"
+    }
+  },
+  "grid": {
+    "two": {
+      "$type": "other",
+      "$value": "repeat(2, 1fr)"
+    },
+    "three": {
+      "$type": "other",
+      "$value": "repeat(3, 1fr)"
+    },
+    "four": {
+      "$type": "other",
+      "$value": "repeat(4, 1fr)"
+    },
+    "six": {
+      "$type": "other",
+      "$value": "repeat(6, 1fr)"
+    },
+    "seven-five": {
+      "$type": "other",
+      "$value": "7fr 5fr"
+    },
+    "five-seven": {
+      "$type": "other",
+      "$value": "5fr 7fr"
+    },
+    "one-two": {
+      "$type": "other",
+      "$value": "1fr 2fr"
+    },
+    "one-three": {
+      "$type": "other",
+      "$value": "1fr 3fr"
+    }
+  }
+}

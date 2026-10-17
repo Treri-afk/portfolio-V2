@@ -1,0 +1,68 @@
+{
+  "size": {
+    "container": {
+      "text": {
+        "$type": "dimension",
+        "$value": "42rem"
+      },
+      "content": {
+        "$type": "dimension",
+        "$value": "80rem"
+      },
+      "wide": {
+        "$type": "dimension",
+        "$value": "100rem"
+      }
+    },
+    "target": {
+      "$type": "dimension",
+      "$value": "2.75rem"
+    },
+    "icon": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "1rem"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "1.25rem"
+      }
+    },
+    "card-min": {
+      "$type": "dimension",
+      "$value": "18rem"
+    },
+    "header": {
+      "$type": "dimension",
+      "$value": "4.5rem"
+    },
+    "hairline": {
+      "$type": "dimension",
+      "$value": "1px"
+    },
+    "viewport-block": {
+      "$type": "dimension",
+      "$value": "100dvh"
+    },
+    "page-inline": {
+      "$type": "dimension",
+      "$value": "100cqi"
+    },
+    "field-multiline": {
+      "$type": "dimension",
+      "$value": "9rem"
+    },
+    "metric-min": {
+      "$type": "dimension",
+      "$value": "9rem"
+    },
+    "decision-term": {
+      "$type": "dimension",
+      "$value": "6.5rem"
+    },
+    "target-min": {
+      "$type": "dimension",
+      "$value": "1.5rem"
+    }
+  }
+}

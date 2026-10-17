@@ -1,0 +1,64 @@
+{
+  "motion": {
+    "hover": {
+      "duration": {
+        "$type": "duration",
+        "$value": "{motion.duration.fast}"
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.standard}"
+      }
+    },
+    "press": {
+      "duration": {
+        "$type": "duration",
+        "$value": "{motion.duration.fast}"
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.out}"
+      }
+    },
+    "page": {
+      "duration": {
+        "$type": "duration",
+        "$value": "{motion.duration.slower}"
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.in-out}"
+      }
+    },
+    "reveal": {
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.linear}"
+      },
+      "range": {
+        "$type": "other",
+        "$value": "{motion.range.entry}"
+      }
+    },
+    "underline": {
+      "duration": {
+        "$type": "duration",
+        "$value": "{motion.duration.base}"
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.out}"
+      }
+    },
+    "zoom": {
+      "duration": {
+        "$type": "duration",
+        "$value": "{motion.duration.slow}"
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.out}"
+      }
+    }
+  }
+}

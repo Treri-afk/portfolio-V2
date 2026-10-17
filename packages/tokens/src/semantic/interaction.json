@@ -1,0 +1,16 @@
+{
+  "interaction": {
+    "zoom": {
+      "$type": "number",
+      "$value": "{scale.hover}"
+    },
+    "icon-zoom": {
+      "$type": "number",
+      "$value": "{scale.icon}"
+    },
+    "nudge": {
+      "$type": "dimension",
+      "$value": "{space.1}"
+    }
+  }
+}

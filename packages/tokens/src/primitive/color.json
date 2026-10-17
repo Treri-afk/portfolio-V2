@@ -1,0 +1,36 @@
+{
+  "color": {
+    "neutral": {
+      "0": { "$type": "color", "$value": "oklch(0.995 0.002 85)" },
+      "25": { "$type": "color", "$value": "oklch(0.975 0.005 85)" },
+      "50": { "$type": "color", "$value": "oklch(0.952 0.006 85)" },
+      "100": { "$type": "color", "$value": "oklch(0.915 0.007 85)" },
+      "200": { "$type": "color", "$value": "oklch(0.86 0.007 85)" },
+      "300": { "$type": "color", "$value": "oklch(0.77 0.007 85)" },
+      "400": { "$type": "color", "$value": "oklch(0.66 0.007 85)" },
+      "500": { "$type": "color", "$value": "oklch(0.56 0.007 85)" },
+      "600": { "$type": "color", "$value": "oklch(0.47 0.007 85)" },
+      "700": { "$type": "color", "$value": "oklch(0.38 0.006 85)" },
+      "800": { "$type": "color", "$value": "oklch(0.28 0.005 85)" },
+      "850": { "$type": "color", "$value": "oklch(0.235 0.005 85)" },
+      "900": { "$type": "color", "$value": "oklch(0.2 0.004 85)" },
+      "950": { "$type": "color", "$value": "oklch(0.165 0.004 85)" },
+      "1000": { "$type": "color", "$value": "oklch(0.13 0.003 85)" }
+    },
+    "vermillon": {
+      "300": { "$type": "color", "$value": "oklch(0.8 0.12 40)" },
+      "400": { "$type": "color", "$value": "oklch(0.72 0.17 38)" },
+      "500": { "$type": "color", "$value": "oklch(0.64 0.2 36)" },
+      "600": { "$type": "color", "$value": "oklch(0.56 0.2 34)" },
+      "700": { "$type": "color", "$value": "oklch(0.5 0.18 33)" }
+    },
+    "green": {
+      "400": { "$type": "color", "$value": "oklch(0.78 0.15 150)" },
+      "700": { "$type": "color", "$value": "oklch(0.48 0.12 150)" }
+    },
+    "red": {
+      "400": { "$type": "color", "$value": "oklch(0.74 0.15 25)" },
+      "700": { "$type": "color", "$value": "oklch(0.5 0.19 25)" }
+    }
+  }
+}

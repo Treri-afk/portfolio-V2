@@ -1,0 +1,18 @@
+{
+  "image": {
+    "width": {
+      "sm": {
+        "$type": "number",
+        "$value": "480"
+      },
+      "md": {
+        "$type": "number",
+        "$value": "960"
+      },
+      "lg": {
+        "$type": "number",
+        "$value": "1600"
+      }
+    }
+  }
+}

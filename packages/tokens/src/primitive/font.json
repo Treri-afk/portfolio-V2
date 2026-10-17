@@ -1,0 +1,140 @@
+{
+  "font": {
+    "family": {
+      "display": {
+        "$type": "fontFamily",
+        "$value": "'Archivo Variable', 'Archivo', system-ui, sans-serif"
+      },
+      "body": {
+        "$type": "fontFamily",
+        "$value": "'Geist Variable', 'Geist', system-ui, sans-serif"
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": "'Geist Mono Variable', 'Geist Mono', ui-monospace, monospace"
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": "400"
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": "500"
+      },
+      "semibold": {
+        "$type": "fontWeight",
+        "$value": "600"
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": "700"
+      },
+      "black": {
+        "$type": "fontWeight",
+        "$value": "850"
+      }
+    },
+    "stretch": {
+      "normal": {
+        "$type": "other",
+        "$value": "100%"
+      },
+      "wide": {
+        "$type": "other",
+        "$value": "112.5%"
+      },
+      "expanded": {
+        "$type": "other",
+        "$value": "125%"
+      }
+    },
+    "size": {
+      "1": {
+        "$type": "dimension",
+        "$value": "0.75rem"
+      },
+      "2": {
+        "$type": "dimension",
+        "$value": "0.8125rem"
+      },
+      "3": {
+        "$type": "dimension",
+        "$value": "0.9375rem"
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": "1.0625rem"
+      },
+      "5": {
+        "$type": "dimension",
+        "$value": "clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem)"
+      },
+      "6": {
+        "$type": "dimension",
+        "$value": "clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem)"
+      },
+      "7": {
+        "$type": "dimension",
+        "$value": "clamp(1.5rem, 1.2rem + 1.3vw, 2.375rem)"
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": "clamp(2rem, 1.3rem + 3vw, 4rem)"
+      },
+      "9": {
+        "$type": "dimension",
+        "$value": "clamp(2.5rem, 1.2rem + 5.4vw, 6.25rem)"
+      },
+      "10": {
+        "$type": "dimension",
+        "$value": "clamp(2.75rem, 1rem + 5.6vw, 7rem)"
+      },
+      "cover": {
+        "$type": "dimension",
+        "$value": "clamp(1.5rem, 13cqi, 4.5rem)"
+      }
+    },
+    "leading": {
+      "tightest": {
+        "$type": "number",
+        "$value": "0.9"
+      },
+      "tight": {
+        "$type": "number",
+        "$value": "1.04"
+      },
+      "snug": {
+        "$type": "number",
+        "$value": "1.2"
+      },
+      "normal": {
+        "$type": "number",
+        "$value": "1.5"
+      },
+      "relaxed": {
+        "$type": "number",
+        "$value": "1.62"
+      }
+    },
+    "tracking": {
+      "tightest": {
+        "$type": "dimension",
+        "$value": "-0.04em"
+      },
+      "tight": {
+        "$type": "dimension",
+        "$value": "-0.02em"
+      },
+      "normal": {
+        "$type": "dimension",
+        "$value": "0em"
+      },
+      "wide": {
+        "$type": "dimension",
+        "$value": "0.08em"
+      }
+    }
+  }
+}

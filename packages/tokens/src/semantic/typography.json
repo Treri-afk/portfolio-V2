@@ -1,0 +1,84 @@
+{
+  "text": {
+    "display-xl": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.display}" },
+      "size": { "$type": "dimension", "$value": "{font.size.10}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.black}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.expanded}" },
+      "leading": { "$type": "number", "$value": "{font.leading.tightest}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.tightest}" }
+    },
+    "display-l": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.display}" },
+      "size": { "$type": "dimension", "$value": "{font.size.9}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.black}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.expanded}" },
+      "leading": { "$type": "number", "$value": "{font.leading.tightest}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.tightest}" }
+    },
+    "display-m": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.display}" },
+      "size": { "$type": "dimension", "$value": "{font.size.8}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.expanded}" },
+      "leading": { "$type": "number", "$value": "{font.leading.tight}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.tight}" }
+    },
+    "heading-l": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.display}" },
+      "size": { "$type": "dimension", "$value": "{font.size.7}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.wide}" },
+      "leading": { "$type": "number", "$value": "{font.leading.snug}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.tight}" }
+    },
+    "heading-m": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.display}" },
+      "size": { "$type": "dimension", "$value": "{font.size.6}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.semibold}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.wide}" },
+      "leading": { "$type": "number", "$value": "{font.leading.snug}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.normal}" }
+    },
+    "lead": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.body}" },
+      "size": { "$type": "dimension", "$value": "{font.size.5}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.normal}" },
+      "leading": { "$type": "number", "$value": "{font.leading.normal}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.normal}" }
+    },
+    "body": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.body}" },
+      "size": { "$type": "dimension", "$value": "{font.size.4}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.normal}" },
+      "leading": { "$type": "number", "$value": "{font.leading.relaxed}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.normal}" }
+    },
+    "small": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.body}" },
+      "size": { "$type": "dimension", "$value": "{font.size.3}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.normal}" },
+      "leading": { "$type": "number", "$value": "{font.leading.normal}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.normal}" }
+    },
+    "mono": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.mono}" },
+      "size": { "$type": "dimension", "$value": "{font.size.2}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.medium}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.normal}" },
+      "leading": { "$type": "number", "$value": "{font.leading.normal}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.normal}" }
+    },
+    "eyebrow": {
+      "family": { "$type": "fontFamily", "$value": "{font.family.mono}" },
+      "size": { "$type": "dimension", "$value": "{font.size.1}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.medium}" },
+      "stretch": { "$type": "other", "$value": "{font.stretch.normal}" },
+      "leading": { "$type": "number", "$value": "{font.leading.snug}" },
+      "tracking": { "$type": "dimension", "$value": "{font.tracking.wide}" }
+    }
+  }
+}

@@ -9,6 +9,8 @@ const origin = z.url().refine((url) => url.startsWith('https://') || new URL(url
 /** Validated at startup: the server refuses to start with a missing or invalid value. */
 export const envSchema = z.object({
   PORT: z.coerce.number().int().positive().default(DEFAULT_PORT),
+  // 0.0.0.0 only inside a container whose port is published on the host loopback (deploy/deploy.sh).
+  HOST: z.enum(['127.0.0.1', '0.0.0.0']).default('127.0.0.1'),
   ALLOWED_ORIGIN: origin,
   SMTP_USER: z.email(),
   // Gmail app password (not the account password): 16 letters, shown with spaces.

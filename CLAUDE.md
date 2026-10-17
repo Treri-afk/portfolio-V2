@@ -28,6 +28,7 @@ Portfolio premium orienté preuves d'expertise. Les projets sont le produit ; le
 | `npm run lint` | ESLint (règles du projet, FSD) + Stylelint (zéro valeur en dur) |
 | `npm run test` | Vitest : tokens (angles, contraste AA, alias), contrats, logique et composants |
 | `npm run check` | gate complet : lint, typecheck, tests, build |
+| `./deploy/deploy.sh [--nginx]` | déploiement sur le VPS (ADR 0008) : check, build, site, API Docker, nginx |
 
 CI GitHub Actions : lint + typecheck, tests, build (ADR 0006). Docker, API et base : prévus.
 

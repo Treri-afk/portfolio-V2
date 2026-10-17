@@ -111,13 +111,14 @@ Le développement est assisté par l'IA (Claude Code), avec un cadre écrit avan
 | `npm run lint` | ESLint + Stylelint |
 | `npm run test` | Vitest |
 | `npm run check` | lint, typecheck, tests et build : le gate de la CI |
+| `./deploy/deploy.sh` | déploiement sur le VPS : site statique + API de contact dans Docker, `--nginx` pour la config (ADR 0008) |
 
 ## État
 
 | Fait | À venir |
 |---|---|
-| Design system, pages, études de cas, pages légales, API de contact (Hono → Gmail) | Mise en ligne sur VPS (nginx) |
-| Pré-rendu, SEO, thèmes clair et sombre | Tests Playwright + axe, Lighthouse CI |
+| Design system, pages, études de cas, pages légales, API de contact (Hono → Gmail), en ligne sur paulabraham.fr | CSP, Tests Playwright + axe |
+| Pré-rendu, SEO, thèmes clair et sombre | Lighthouse CI |
 | Passe de performance, lint bloquant, tests Vitest, CI | Docker, PostgreSQL |
 
 ## Contenus

@@ -29,5 +29,5 @@ const app = createApp({
   clientKey: isLocal ? (c) => clientKey(c) ?? 'localhost' : clientKey,
 });
 
-// Loopback only: nginx is the single entry point (TLS, X-Real-IP).
-serve({ fetch: app.fetch, port: env.PORT, hostname: '127.0.0.1' });
+// Loopback only (or a container port published on loopback): nginx is the single entry point.
+serve({ fetch: app.fetch, port: env.PORT, hostname: env.HOST });

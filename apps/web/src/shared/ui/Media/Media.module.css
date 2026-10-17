@@ -25,6 +25,7 @@
   block-size: 100%;
   object-fit: cover;
   object-position: calc(var(--media-focal-x) * 1%) calc(var(--media-focal-y) * 1%);
+  transition: transform var(--motion-zoom-duration) var(--motion-zoom-easing);
 }
 
 .frame picture {
@@ -32,10 +33,6 @@
 }
 
 /* Any ancestor marked data-zoom-scope zooms its visual while one of its links is hovered. */
-.image {
-  transition: transform var(--motion-zoom-duration) var(--motion-zoom-easing);
-}
-
 @media (--hover) {
   :global([data-zoom-scope]):has(a:hover) .image {
     transform: scale(var(--interaction-zoom));

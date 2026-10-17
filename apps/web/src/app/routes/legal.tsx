@@ -1,6 +1,5 @@
 import { LegalPage } from '../../pages/legal/index.ts';
 import { getLegalDocument } from '../../shared/api/legal/index.server.ts';
-import { seo } from '../../shared/content/index.ts';
 import { buildMeta } from '../../shared/lib/seo/index.ts';
 import type { Route } from './+types/legal';
 
@@ -11,8 +10,8 @@ export function loader({ url }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ loaderData, location }) =>
   buildMeta({
-    title: loaderData?.document.title ?? seo.pages.notFound.title,
-    description: loaderData?.document.description ?? seo.pages.notFound.description,
+    title: loaderData.document.title,
+    description: loaderData.document.description,
     path: location.pathname,
   });
 

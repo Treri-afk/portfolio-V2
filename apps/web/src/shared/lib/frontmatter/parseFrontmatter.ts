@@ -7,7 +7,7 @@ export interface Frontmatter {
   body: string;
 }
 
-const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === 'object' && value !== null;
+const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === 'object' && value !== null && !Array.isArray(value);
 
 /** Splits a Markdown document into its YAML front-matter (always an object) and its body. */
 export function parseFrontmatter(source: string): Frontmatter {

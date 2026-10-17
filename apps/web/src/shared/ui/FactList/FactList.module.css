@@ -1,3 +1,5 @@
+@import '@portfolio/tokens/custom-media.css';
+
 .list {
   display: grid;
   margin: 0;
@@ -15,4 +17,31 @@
   font-family: var(--text-small-family);
   font-size: var(--text-small-size);
   line-height: var(--text-small-leading);
+}
+
+.list[data-variant='decision'] {
+  gap: var(--layout-gap-md);
+
+  .row {
+    padding-block: 0;
+    border: none;
+
+    @media (--bp-sm) {
+      grid-template-columns: var(--fact-list-term-width) 1fr;
+      gap: var(--layout-gap-md);
+    }
+  }
+
+  .term {
+    padding-block-start: var(--fact-list-term-offset);
+  }
+
+  .description {
+    display: grid;
+    gap: var(--layout-gap-sm);
+    justify-items: start;
+    font-family: var(--text-body-family);
+    font-size: var(--text-body-size);
+    line-height: var(--text-body-leading);
+  }
 }

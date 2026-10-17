@@ -3,7 +3,7 @@
 Portfolio premium orienté preuves d'expertise. Les projets sont le produit ; le design les sert ; le code est lui-même une preuve.
 
 ## Stack
-> Périmètre actuel (ADR 0001) : npm workspaces, front seul. Docker, API, base, lint, tests et CI ci-dessous restent la cible.
+> Périmètre actuel (ADR 0001, 0006) : npm workspaces, front seul, lint + tests + CI en place. Docker, API et base restent la cible.
 
 - Monorepo pnpm :
   - `apps/web` — React 19 + Vite + TypeScript + React Router v7 (framework mode, pré-rendu)
@@ -24,8 +24,11 @@ Portfolio premium orienté preuves d'expertise. Les projets sont le produit ; le
 | `npm run tokens:build` | JSON DTCG → `tokens.css`, `custom-media.css`, `media.ts`, `favicon.svg` |
 | `npm run media -w @portfolio/web` | variantes AVIF/WebP des images (incrémental, lancé par `dev` et `build`) |
 | `npm run typecheck` | `tsc` sur chaque workspace (typegen React Router inclus) |
+| `npm run lint` | ESLint (règles du projet, FSD) + Stylelint (zéro valeur en dur) |
+| `npm run test` | Vitest : tokens (angles, contraste AA, alias), contrats, logique et composants |
+| `npm run check` | gate complet : lint, typecheck, tests, build |
 
-Docker, API, base, lint, tests et CI : prévus, pas encore en place.
+CI GitHub Actions : lint + typecheck, tests, build (ADR 0006). Docker, API et base : prévus.
 
 ## Règles non négociables
 

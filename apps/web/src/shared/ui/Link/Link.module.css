@@ -60,7 +60,7 @@
   inset-inline: 0;
   block-size: var(--link-bar);
   content: '';
-  background: currentColor;
+  background: currentcolor;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--motion-underline-duration) var(--motion-underline-easing);

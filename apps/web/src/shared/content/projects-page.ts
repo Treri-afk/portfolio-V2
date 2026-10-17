@@ -5,5 +5,5 @@ export const projectsPage = {
   filterLabel: 'Filtrer par technologie',
   reset: 'Tout afficher',
   empty: 'Aucun projet ne combine toutes ces technologies.',
-  count: (count: number): string => (count > 1 ? `${count} projets` : `${count} projet`),
+  count: (count: number): string => `${String(count)} ${count > 1 ? 'projets' : 'projet'}`,
 } as const;

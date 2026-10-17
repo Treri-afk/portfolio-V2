@@ -142,5 +142,11 @@
       "$type": "other",
       "$value": "1fr 3fr"
     }
+  },
+  "stroke": {
+    "icon": {
+      "$type": "number",
+      "$value": "2"
+    }
   }
 }

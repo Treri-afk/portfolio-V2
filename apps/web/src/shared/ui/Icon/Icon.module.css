@@ -3,7 +3,7 @@
   inline-size: var(--icon-sm);
   block-size: var(--icon-sm);
   fill: none;
-  stroke: currentColor;
+  stroke: currentcolor;
   stroke-linecap: square;
   stroke-width: var(--icon-stroke);
 }

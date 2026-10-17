@@ -13,6 +13,24 @@
         "$type": "number",
         "$value": "1600"
       }
+    },
+    "span": {
+      "full": {
+        "$type": "other",
+        "$value": "100vw"
+      },
+      "half": {
+        "$type": "other",
+        "$value": "50vw"
+      },
+      "third": {
+        "$type": "other",
+        "$value": "33vw"
+      },
+      "quarter": {
+        "$type": "other",
+        "$value": "25vw"
+      }
     }
   }
 }

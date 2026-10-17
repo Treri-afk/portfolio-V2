@@ -2,7 +2,6 @@ import { coverOf, nextOf, toProjectCard, toProjectDetail } from '../../entities/
 import { getProject, listProjects } from '../../entities/project/index.server.ts';
 import { listTechnologies } from '../../entities/technology/index.server.ts';
 import { ProjectPage } from '../../pages/project/index.ts';
-import { seo } from '../../shared/content/index.ts';
 import { buildMeta, creativeWorkJsonLd } from '../../shared/lib/seo/index.ts';
 import type { Route } from './+types/project';
 
@@ -16,7 +15,6 @@ export function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ loaderData, location }) => {
   const path = location.pathname;
-  if (!loaderData) return buildMeta({ ...seo.pages.notFound, path });
   const { title, tagline, summary, year, liveUrl } = loaderData.project;
   const image = coverOf(loaderData.project)?.src;
   return [...buildMeta({ title, description: tagline, path, image }), creativeWorkJsonLd({ name: title, description: summary, year, url: liveUrl })];

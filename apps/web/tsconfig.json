@@ -6,7 +6,8 @@
     "react-router.config.ts",
     "vite.config.ts",
     ".react-router/types/**/*",
-    "env.schema.ts"
+    "env.schema.ts",
+    "vitest.config.ts"
   ],
   "compilerOptions": {
     "types": [

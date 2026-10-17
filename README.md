@@ -16,7 +16,7 @@ npm run build      # build de production + pré-rendu de toutes les pages
 
 ## Ce que montre ce dépôt
 
-- **Un design system sans valeur en dur.** Couleurs, tailles, espacements, angles, durées, grilles, largeurs d'images : tout vient de tokens JSON au format DTCG, compilés par Style Dictionary. La règle est tenue par revue de code ; le lint qui la rendra bloquante est la prochaine étape.
+- **Un design system sans valeur en dur.** Couleurs, tailles, espacements, angles, durées, grilles, largeurs d'images : tout vient de tokens JSON au format DTCG, compilés par Style Dictionary. ESLint et Stylelint la rendent bloquante.
 - **Des pages pré-rendues.** React Router 8 en framework mode, `ssr: false` + `prerender` : chaque page est un fichier HTML statique, hydraté ensuite.
 - **Du contenu validé.** Les études de cas sont des fichiers Markdown avec front-matter, validés au build par des schémas Zod partagés. Un contenu invalide casse le build, jamais la page du visiteur.
 - **Une architecture lisible.** Feature-Sliced Design (`app → pages → widgets → features → entities → shared`), une responsabilité par fichier, imports uniquement vers les couches inférieures.
@@ -70,7 +70,7 @@ Le détail des arbitrages est dans [`docs/adr/`](docs/adr).
 ## Design system
 
 - **Trois niveaux de tokens** : primitifs (`color.neutral.950`), sémantiques (`color.text.primary`), composants (`button.height`). Les composants ne lisent jamais les primitifs.
-- **Contraste AA** mesuré pour chaque paire texte/surface, dans les deux thèmes (script ponctuel ; le test Vitest qui le garantira est prévu).
+- **Contraste AA** mesuré pour chaque paire texte/surface, dans les deux thèmes (test Vitest).
 - **Angles** bornés entre 2° et 20°, jamais à 45° ni à l'un de ses multiples. Un seul composant découpe la page (`Slice`), un seul trace un trait incliné (`SlantRule`) ; le volet de transition de page est l'exception documentée dans l'ADR 0005.
 - **Mouvement** limité à `transform`, `opacity` et `clip-path`. Les durées passent à zéro quand l'utilisateur réduit les animations, directement dans les tokens.
 - Inventaire des composants : [`apps/web/src/shared/ui/README.md`](apps/web/src/shared/ui/README.md).
@@ -106,14 +106,17 @@ Le développement est assisté par l'IA (Claude Code), avec un cadre écrit avan
 | `npm run preview` | sert le build (tester les pages avec un `/` final) |
 | `npm run tokens:build` | compile les tokens |
 | `npm run typecheck` | TypeScript strict sur tous les paquets |
+| `npm run lint` | ESLint + Stylelint |
+| `npm run test` | Vitest |
+| `npm run check` | lint, typecheck, tests et build : le gate de la CI |
 
 ## État
 
 | Fait | À venir |
 |---|---|
 | Design system, pages, études de cas, pages légales | API Hono + PostgreSQL pour le formulaire de contact |
-| Pré-rendu, SEO, thèmes clair et sombre | Lint qui bloque les valeurs en dur, tests Vitest et Playwright |
-| Passe de performance | Docker, CI GitHub Actions, mise en ligne |
+| Pré-rendu, SEO, thèmes clair et sombre | Tests Playwright + axe, Lighthouse CI |
+| Passe de performance, lint bloquant, tests Vitest, CI | Docker, mise en ligne |
 
 ## Contenus
 

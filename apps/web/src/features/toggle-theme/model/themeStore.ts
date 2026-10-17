@@ -1,10 +1,10 @@
-import { THEME_EVENT, readStoredTheme, systemTheme, type Theme } from './themeSource.ts';
+import { DEFAULT_THEME, THEME_EVENT, readStoredTheme, type Theme } from './themeSource.ts';
 
 export type { Theme } from './themeSource.ts';
 
-export const getTheme = (): Theme => readStoredTheme() ?? systemTheme();
+export const getTheme = (): Theme => readStoredTheme() ?? DEFAULT_THEME;
 
-export const getServerTheme = (): Theme => 'light';
+export const getServerTheme = (): Theme => DEFAULT_THEME;
 
 export function setTheme(theme: Theme): void {
   document.documentElement.dataset.theme = theme;

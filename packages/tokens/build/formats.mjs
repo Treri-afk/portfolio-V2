@@ -10,13 +10,12 @@ const declaration = (token) => {
 };
 
 /*
- * Semantic colors are light-dark() pairs: color-scheme alone switches the theme.
+ * Semantic colors are light-dark() pairs: color-scheme alone switches the theme. Light is the default,
+ * whatever the system preference; dark only when chosen with the toggle (data-theme).
  * --scheme-inverse lets a block (Slice tone="inverse") flip to the opposite scheme in either theme.
  */
 const SCHEMES = [
-  ':root { color-scheme: light dark; --scheme-inverse: dark; }',
-  "@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { --scheme-inverse: light; } }",
-  ":root[data-theme='light'] { color-scheme: light; --scheme-inverse: dark; }",
+  ':root { color-scheme: light; --scheme-inverse: dark; }',
   ":root[data-theme='dark'] { color-scheme: dark; --scheme-inverse: light; }",
 ];
 

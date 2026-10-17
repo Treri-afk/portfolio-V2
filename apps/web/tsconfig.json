@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "src",
+    "scripts",
+    "react-router.config.ts",
+    "vite.config.ts",
+    ".react-router/types/**/*",
+    "env.schema.ts"
+  ],
+  "compilerOptions": {
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "jsx": "react-jsx",
+    "rootDirs": [
+      ".",
+      "./.react-router/types"
+    ],
+    "allowImportingTsExtensions": true
+  }
+}

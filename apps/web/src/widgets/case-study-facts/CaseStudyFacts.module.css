@@ -1,0 +1,11 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.grid {
+  display: grid;
+  gap: var(--layout-gap-2xl);
+  align-items: start;
+
+  @media (--bp-lg) {
+    grid-template-columns: var(--layout-columns-aside-main);
+  }
+}

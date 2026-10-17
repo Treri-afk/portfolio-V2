@@ -1,0 +1,27 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.grid {
+  display: grid;
+  gap: var(--layout-gap-xl) var(--layout-gap-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid[data-variant='cards'] {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--layout-card-min)), 1fr));
+}
+
+.grid[data-variant='split'] {
+  align-items: center;
+
+  @media (--bp-md) {
+    grid-template-columns: var(--layout-columns-two);
+  }
+}
+
+.grid[data-variant='pillars'] {
+  @media (--bp-lg) {
+    grid-template-columns: var(--layout-columns-three);
+  }
+}

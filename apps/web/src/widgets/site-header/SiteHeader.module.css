@@ -1,0 +1,48 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.header {
+  position: relative;
+  z-index: var(--layout-z-header);
+}
+
+/* Mobile: name and theme toggle on the first row, navigation below. Wide: one row. */
+.inner {
+  display: grid;
+  grid-template-areas:
+    'brand toggle'
+    'nav nav';
+  gap: var(--layout-gap-sm) var(--layout-gap-lg);
+  align-items: center;
+  min-block-size: var(--header-height);
+  padding-block: var(--layout-gap-sm);
+
+  @media (--bp-md) {
+    grid-template-areas: 'brand nav toggle';
+  }
+}
+
+.brand {
+  grid-area: brand;
+  justify-self: start;
+}
+
+.nav {
+  grid-area: nav;
+
+  @media (--bp-md) {
+    justify-self: end;
+  }
+}
+
+.toggle {
+  grid-area: toggle;
+  justify-self: end;
+}
+
+.list {
+  display: flex;
+  gap: var(--layout-gap-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,69 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface-placeholder);
+  view-transition-name: var(--media-transition-name);
+}
+
+.frame[data-ratio='square'] {
+  aspect-ratio: var(--layout-ratio-square);
+}
+
+.frame[data-ratio='portrait'] {
+  aspect-ratio: var(--layout-ratio-portrait);
+}
+
+.frame[data-ratio='landscape'] {
+  aspect-ratio: var(--layout-ratio-landscape);
+}
+
+.image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: calc(var(--media-focal-x) * 1%) calc(var(--media-focal-y) * 1%);
+}
+
+.frame picture {
+  display: contents;
+}
+
+/* Any ancestor marked data-zoom-scope zooms its visual while one of its links is hovered. */
+.image {
+  transition: transform var(--motion-zoom-duration) var(--motion-zoom-easing);
+}
+
+@media (--hover) {
+  :global([data-zoom-scope]):has(a:hover) .image {
+    transform: scale(var(--interaction-zoom));
+  }
+}
+
+.frame:not([data-ratio]) .image {
+  block-size: auto;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(var(--media-reveal-inset) 0 0 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (--motion-ok) {
+    .frame[data-reveal] {
+      animation: reveal var(--motion-reveal-easing) both;
+      animation-timeline: view();
+      animation-range: var(--motion-reveal-range);
+    }
+  }
+}

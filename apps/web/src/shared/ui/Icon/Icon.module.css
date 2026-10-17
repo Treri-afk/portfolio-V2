@@ -1,0 +1,14 @@
+.icon {
+  flex: none;
+  inline-size: var(--icon-sm);
+  block-size: var(--icon-sm);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-width: var(--icon-stroke);
+}
+
+.icon[data-size='md'] {
+  inline-size: var(--icon-md);
+  block-size: var(--icon-md);
+}

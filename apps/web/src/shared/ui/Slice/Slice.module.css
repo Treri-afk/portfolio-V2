@@ -1,0 +1,105 @@
+/*
+ * Edges are cut with clip-path on a background layer only, so content can overflow onto the next slice.
+ * Offset = page width × tan(angle). Each slice pulls itself up by its top offset so slanted edges nest without gaps.
+ */
+.slice {
+  --_bg: var(--color-surface-base);
+  --_top-start: 0%;
+  --_top-end: 0%;
+  --_bottom-start: 0%;
+  --_bottom-end: 0%;
+
+  position: relative;
+  isolation: isolate;
+  padding-block: calc(var(--slice-padding-block) + var(--_top-start) + var(--_top-end))
+    calc(var(--slice-padding-block) + var(--_bottom-start) + var(--_bottom-end));
+  color: var(--color-text-primary);
+}
+
+.slice::before {
+  position: absolute;
+  z-index: var(--layout-z-below);
+  inset: 0;
+  content: '';
+  background: var(--_bg);
+  clip-path: polygon(
+    0 var(--_top-start),
+    100% var(--_top-end),
+    100% calc(100% - var(--_bottom-end)),
+    0 calc(100% - var(--_bottom-start))
+  );
+}
+
+.slice[data-angle-top] {
+  --_top-rise: calc(var(--slice-page-inline) * tan(var(--_angle-top)));
+  --_top-start: max(0%, calc(0% - var(--_top-rise)));
+  --_top-end: max(0%, var(--_top-rise));
+
+  margin-block-start: calc(0% - var(--_top-start) - var(--_top-end));
+}
+
+.slice[data-angle-bottom] {
+  --_bottom-rise: calc(var(--slice-page-inline) * tan(var(--_angle-bottom)));
+  --_bottom-start: max(0%, var(--_bottom-rise));
+  --_bottom-end: max(0%, calc(0% - var(--_bottom-rise)));
+}
+
+.slice[data-elevated] {
+  z-index: var(--layout-z-overlap);
+}
+
+.slice[data-tone='sunken'] {
+  --_bg: var(--color-surface-sunken);
+}
+
+.slice[data-tone='inverse'] {
+  color-scheme: var(--scheme-inverse);
+}
+
+.slice[data-angle-top='fall-gentle'] {
+  --_angle-top: var(--angle-slice-fall-gentle);
+}
+
+.slice[data-angle-top='fall-base'] {
+  --_angle-top: var(--angle-slice-fall-base);
+}
+
+.slice[data-angle-top='fall-steep'] {
+  --_angle-top: var(--angle-slice-fall-steep);
+}
+
+.slice[data-angle-top='rise-gentle'] {
+  --_angle-top: var(--angle-slice-rise-gentle);
+}
+
+.slice[data-angle-top='rise-base'] {
+  --_angle-top: var(--angle-slice-rise-base);
+}
+
+.slice[data-angle-top='rise-steep'] {
+  --_angle-top: var(--angle-slice-rise-steep);
+}
+
+.slice[data-angle-bottom='fall-gentle'] {
+  --_angle-bottom: var(--angle-slice-fall-gentle);
+}
+
+.slice[data-angle-bottom='fall-base'] {
+  --_angle-bottom: var(--angle-slice-fall-base);
+}
+
+.slice[data-angle-bottom='fall-steep'] {
+  --_angle-bottom: var(--angle-slice-fall-steep);
+}
+
+.slice[data-angle-bottom='rise-gentle'] {
+  --_angle-bottom: var(--angle-slice-rise-gentle);
+}
+
+.slice[data-angle-bottom='rise-base'] {
+  --_angle-bottom: var(--angle-slice-rise-base);
+}
+
+.slice[data-angle-bottom='rise-steep'] {
+  --_angle-bottom: var(--angle-slice-rise-steep);
+}

@@ -1,0 +1,44 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.section {
+  display: grid;
+  gap: var(--layout-gap-md);
+
+  @media (--bp-lg) {
+    grid-template-columns: var(--layout-columns-label-content);
+    gap: var(--layout-gap-xl);
+  }
+}
+
+.title {
+  @media (--bp-lg) {
+    position: sticky;
+    inset-block-start: var(--layout-gap-xl);
+    align-self: start;
+  }
+}
+
+.gallery {
+  display: grid;
+  gap: var(--layout-gap-lg);
+}
+
+.shots {
+  display: grid;
+  gap: var(--layout-gap-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (--bp-md) {
+    grid-template-columns: var(--layout-columns-two);
+  }
+}
+
+.shots[data-layout='portrait'] {
+  grid-template-columns: var(--layout-columns-two);
+
+  @media (--bp-lg) {
+    grid-template-columns: var(--layout-columns-four);
+  }
+}

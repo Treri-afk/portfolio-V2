@@ -1,0 +1,10 @@
+.form {
+  display: grid;
+  gap: var(--layout-gap-lg);
+  justify-items: stretch;
+}
+
+.form > button {
+  justify-self: start;
+}
+

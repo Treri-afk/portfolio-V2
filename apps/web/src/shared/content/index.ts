@@ -1,0 +1,12 @@
+export { about } from './about.ts';
+export { career } from './career.ts';
+export { contact } from './contact.ts';
+export { legalLabels, legalLinks } from './legal-links.ts';
+export * from './home/index.ts';
+export { nav } from './nav.ts';
+export { notFound } from './not-found.ts';
+export { projectLabels } from './project-labels.ts';
+export { projectsPage } from './projects-page.ts';
+export { seo } from './seo.ts';
+export { site } from './site.ts';
+export { ui } from './ui.ts';

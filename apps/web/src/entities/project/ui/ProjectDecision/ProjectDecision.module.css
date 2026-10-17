@@ -1,0 +1,32 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.list {
+  display: grid;
+  gap: var(--layout-gap-md);
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  gap: var(--layout-gap-xs);
+
+  @media (--bp-sm) {
+    grid-template-columns: var(--decision-term-width) 1fr;
+    gap: var(--layout-gap-md);
+  }
+}
+
+.term {
+  padding-block-start: var(--decision-term-offset);
+}
+
+.text {
+  display: grid;
+  gap: var(--layout-gap-sm);
+  justify-items: start;
+  margin: 0;
+  font-family: var(--text-body-family);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-leading);
+}
+

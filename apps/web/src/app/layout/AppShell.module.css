@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-block-size: var(--layout-viewport-block);
+  overflow-x: clip;
+  container-type: inline-size;
+}
+
+.main {
+  flex: 1;
+}
+
+.main:focus {
+  outline: none;
+}

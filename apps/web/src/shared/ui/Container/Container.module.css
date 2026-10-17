@@ -1,0 +1,14 @@
+.container {
+  inline-size: 100%;
+  max-inline-size: var(--layout-content);
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+}
+
+.container[data-size='text'] {
+  max-inline-size: var(--layout-measure);
+}
+
+.container[data-size='wide'] {
+  max-inline-size: var(--layout-wide);
+}

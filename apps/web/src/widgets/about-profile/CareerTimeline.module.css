@@ -1,0 +1,20 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entry {
+  display: grid;
+  gap: var(--layout-gap-sm);
+  padding-block: var(--layout-gap-lg);
+  border-block-start: var(--layout-border-hairline) solid var(--color-line-strong);
+
+  @media (--bp-md) {
+    grid-template-columns: var(--layout-columns-meta-content);
+    gap: var(--layout-gap-lg);
+  }
+}

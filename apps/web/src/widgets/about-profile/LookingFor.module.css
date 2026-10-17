@@ -1,0 +1,28 @@
+@import '@portfolio/tokens/custom-media.css';
+
+/* The rail spans the whole row so the panel can stick until the career list ends. */
+.rail {
+  align-self: stretch;
+}
+
+.panel {
+  padding: var(--layout-gap-lg);
+  border: var(--layout-border-strong) solid var(--color-line-rule);
+  background: var(--color-surface-base);
+
+  @media (--bp-md) {
+    position: sticky;
+    inset-block-start: var(--layout-gap-xl);
+  }
+}
+
+.list {
+  display: grid;
+  gap: var(--layout-gap-md);
+  margin: 0;
+  padding-inline-start: var(--layout-gap-md);
+}
+
+.list li::marker {
+  color: var(--color-text-accent);
+}

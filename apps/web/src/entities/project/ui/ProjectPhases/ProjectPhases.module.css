@@ -1,0 +1,30 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.list {
+  display: grid;
+  grid-template-columns: var(--layout-columns-three);
+  gap: var(--phase-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (--bp-sm) {
+    grid-template-columns: var(--layout-columns-six);
+  }
+}
+
+.phase {
+  display: grid;
+  gap: var(--layout-gap-xs);
+}
+
+.phase::before {
+  block-size: var(--phase-bar);
+  content: '';
+  border: var(--layout-border-hairline) solid var(--color-line-strong);
+}
+
+.phase[data-covered]::before {
+  border-color: var(--color-accent-default);
+  background: var(--color-accent-default);
+}

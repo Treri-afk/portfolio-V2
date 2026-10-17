@@ -1,0 +1,7 @@
+.pillar {
+  --accent-bar-weight: var(--layout-border-heavy);
+
+  padding-block-start: var(--layout-gap-md);
+  border-block-start: var(--accent-bar-weight) solid var(--color-line-rule);
+}
+

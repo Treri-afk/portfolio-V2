@@ -1,0 +1,37 @@
+/* The cover is its own size container: the title scales with the card, never breaks inside a word. */
+.fallback {
+  container-type: inline-size;
+  display: grid;
+  align-items: end;
+  padding: var(--layout-gap-lg);
+  overflow: hidden;
+  border: var(--layout-border-heavy) solid var(--color-line-rule);
+  view-transition-name: var(--cover-transition-name);
+}
+
+.fallback[data-ratio='square'] {
+  aspect-ratio: var(--layout-ratio-square);
+}
+
+.fallback[data-ratio='portrait'] {
+  aspect-ratio: var(--layout-ratio-portrait);
+}
+
+.fallback[data-ratio='landscape'] {
+  aspect-ratio: var(--layout-ratio-landscape);
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-family: var(--text-display-l-family);
+  font-size: var(--cover-title-size);
+  font-weight: var(--text-display-l-weight);
+  font-stretch: var(--text-display-l-stretch);
+  line-height: var(--text-display-l-leading);
+  letter-spacing: var(--text-display-l-tracking);
+  text-wrap: balance;
+}
+
+.rule {
+  align-self: start;
+}

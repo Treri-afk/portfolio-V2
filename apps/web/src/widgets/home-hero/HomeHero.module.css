@@ -1,0 +1,26 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.grid {
+  display: grid;
+  gap: var(--layout-gap-xl);
+  align-items: end;
+
+  @media (--bp-lg) {
+    grid-template-columns: var(--layout-columns-lead-media);
+  }
+}
+
+.copy {
+  padding-block-start: var(--layout-gap-xl);
+}
+
+.lead {
+  max-inline-size: var(--layout-measure);
+}
+
+.visual {
+  display: grid;
+  gap: var(--layout-gap-sm);
+  margin: 0;
+  margin-block-end: calc(0% - var(--layout-section) - var(--hero-visual-overhang));
+}

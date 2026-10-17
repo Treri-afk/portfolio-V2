@@ -1,0 +1,24 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.block {
+  display: grid;
+  inline-size: 100%;
+  gap: var(--layout-gap-xl);
+  align-items: center;
+
+  @media (--bp-lg) {
+    grid-template-columns: var(--layout-columns-two);
+    gap: var(--layout-gap-2xl);
+  }
+}
+
+.block[data-side='end'] > :first-child {
+  @media (--bp-lg) {
+    order: 1;
+  }
+}
+
+.body {
+  max-inline-size: var(--layout-measure);
+}
+

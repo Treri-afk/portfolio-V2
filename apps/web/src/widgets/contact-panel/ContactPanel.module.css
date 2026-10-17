@@ -1,0 +1,30 @@
+@import '@portfolio/tokens/custom-media.css';
+
+/* Mobile: intro, form, direct links (DOM order). Desktop: intro and direct links on the left, form on the right. */
+.grid {
+  display: grid;
+  gap: var(--layout-gap-xl);
+
+  @media (--bp-lg) {
+    grid-template-columns: var(--layout-columns-aside-main);
+    grid-template-areas:
+      'intro form'
+      'direct form';
+    gap: var(--layout-gap-lg) var(--layout-gap-2xl);
+    align-items: start;
+  }
+}
+
+@media (--bp-lg) {
+  .intro {
+    grid-area: intro;
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  .direct {
+    grid-area: direct;
+  }
+}

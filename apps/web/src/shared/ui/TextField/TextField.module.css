@@ -1,0 +1,48 @@
+.field {
+  display: grid;
+  gap: var(--layout-gap-xs);
+}
+
+.input {
+  min-block-size: var(--layout-target);
+  padding: var(--field-padding);
+  border: var(--field-border) solid var(--color-line-strong);
+  border-radius: var(--layout-radius);
+  background: var(--color-surface-base);
+  color: var(--color-text-primary);
+  font: inherit;
+}
+
+.input[data-multiline] {
+  min-block-size: var(--field-multiline-height);
+  resize: vertical;
+}
+
+.input[data-hovered] {
+  border-color: var(--color-line-rule);
+}
+
+.input[data-focused] {
+  border-color: var(--color-accent-default);
+  outline: none;
+}
+
+/* Keyboard focus keeps the site-wide ring: the border change alone is a hue shift, not enough contrast. */
+.input[data-focus-visible] {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+
+.input[data-invalid] {
+  border-color: var(--color-state-danger);
+}
+
+.description {
+  color: var(--color-text-muted);
+  font-size: var(--text-small-size);
+}
+
+.error {
+  color: var(--color-state-danger);
+  font-size: var(--text-small-size);
+}

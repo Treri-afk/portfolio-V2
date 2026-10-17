@@ -1,0 +1,18 @@
+.list {
+  display: grid;
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  gap: var(--layout-gap-xs);
+  padding-block: var(--layout-gap-md);
+  border-block-start: var(--layout-border-hairline) solid var(--color-line-subtle);
+}
+
+.description {
+  margin: 0;
+  font-family: var(--text-small-family);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-leading);
+}

@@ -1,0 +1,7 @@
+.rule {
+  display: block;
+  inline-size: var(--slant-rule-length);
+  block-size: var(--slant-rule-weight);
+  background: var(--slant-rule-color);
+  rotate: var(--slant-rule-angle);
+}

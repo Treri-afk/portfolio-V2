@@ -1,0 +1,23 @@
+/*
+ * Accent bar drawn over an element's top rule on hover: same gesture as the link underlines.
+ * The host sets --accent-bar-weight to the thickness of its own top border.
+ */
+.bar {
+  position: relative;
+}
+
+.bar::after {
+  position: absolute;
+  inset-block-start: calc(0% - var(--accent-bar-weight));
+  inset-inline: 0;
+  block-size: var(--accent-bar-weight);
+  content: '';
+  background: var(--color-accent-default);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-underline-duration) var(--motion-underline-easing);
+}
+
+.bar:hover::after {
+  transform: scaleX(1);
+}

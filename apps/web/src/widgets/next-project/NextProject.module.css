@@ -1,0 +1,4 @@
+/* Positioned so the stretched title link covers the whole block. */
+.frame {
+  position: relative;
+}

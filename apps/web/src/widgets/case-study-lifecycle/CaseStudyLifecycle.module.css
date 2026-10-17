@@ -1,0 +1,26 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.steps {
+  display: grid;
+  gap: var(--layout-gap-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (--bp-md) {
+    grid-template-columns: var(--layout-columns-two);
+  }
+
+  @media (--bp-xl) {
+    grid-template-columns: var(--layout-columns-three);
+  }
+}
+
+.step {
+  display: grid;
+  gap: var(--layout-gap-sm);
+  align-content: start;
+  padding-block-start: var(--layout-gap-md);
+  border-block-start: var(--layout-border-strong) solid var(--color-accent-default);
+}
+

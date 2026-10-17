@@ -1,0 +1,42 @@
+.metric {
+  display: grid;
+  gap: var(--metric-gap);
+  align-content: start;
+  padding-block-start: var(--layout-gap-sm);
+  border-block-start: var(--metric-rule) solid var(--color-line-rule);
+}
+
+.value {
+  margin: 0;
+  color: var(--color-text-accent);
+  font-family: var(--text-display-m-family);
+  font-size: var(--text-heading-l-size);
+  font-weight: var(--text-display-m-weight);
+  font-stretch: var(--text-display-m-stretch);
+  line-height: var(--text-display-m-leading);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric[data-size='lg'] .value {
+  font-size: var(--text-display-m-size);
+}
+
+.unit {
+  margin-inline-start: var(--metric-gap);
+  font-size: var(--text-lead-size);
+}
+
+.label {
+  margin: 0;
+  font-family: var(--text-small-family);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-leading);
+}
+
+.source {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--text-eyebrow-family);
+  font-size: var(--text-eyebrow-size);
+  line-height: var(--text-eyebrow-leading);
+}

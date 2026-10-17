@@ -1,0 +1,94 @@
+@import '@portfolio/tokens/custom-media.css';
+
+/* Colors switch instantly; only transform is animated (underline bar, arrow nudge). */
+.link {
+  position: relative;
+  color: inherit;
+  text-decoration-thickness: var(--link-underline);
+  text-underline-offset: var(--link-underline-offset);
+}
+
+.link:hover {
+  color: var(--color-text-accent);
+}
+
+.link[data-variant='nav'],
+.link[data-variant='standalone'],
+.link[data-variant='file'] {
+  display: inline-flex;
+  gap: var(--layout-gap-sm);
+  align-items: center;
+  font-family: var(--text-mono-family);
+  font-size: var(--text-mono-size);
+  letter-spacing: var(--text-eyebrow-tracking);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* WCAG 2.5.8: inline action links keep a 24 px minimum target. */
+.link[data-variant='standalone'],
+.link[data-variant='file'] {
+  min-block-size: var(--layout-target-min);
+  font-weight: var(--link-weight);
+}
+
+.link[data-variant='nav'] {
+  min-block-size: var(--layout-target-min);
+}
+
+.link[data-stretched] {
+  position: static;
+}
+
+.link[data-stretched]::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+}
+
+/* A file name keeps its exact case. */
+.link[data-variant='file'] {
+  text-transform: none;
+}
+
+/* Underline bar that grows from the left on hover and stays drawn on the current page. */
+.link[data-variant='nav']::after,
+.link[data-variant='standalone']::after,
+.link[data-variant='file']::after {
+  position: absolute;
+  inset-block-end: calc(0% - var(--link-underline-gap));
+  inset-inline: 0;
+  block-size: var(--link-bar);
+  content: '';
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-underline-duration) var(--motion-underline-easing);
+}
+
+.link[data-variant='nav']:hover::after,
+.link[data-variant='nav']:focus-visible::after,
+.link[data-variant='standalone']:hover::after,
+.link[data-variant='standalone']:focus-visible::after,
+.link[data-variant='file']:hover::after,
+.link[data-variant='file']:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.link[data-variant='nav'][aria-current='page']::after {
+  block-size: var(--link-current-underline);
+  background: var(--color-accent-default);
+  transform: scaleX(1);
+}
+
+.link :global([data-icon^='arrow']) {
+  transition: transform var(--motion-hover-duration) var(--motion-hover-easing);
+}
+
+.link:hover :global([data-icon='arrow-right']) {
+  transform: translateX(var(--interaction-nudge));
+}
+
+.link:hover :global([data-icon='arrow-up-right']) {
+  transform: translate(var(--interaction-nudge), calc(0% - var(--interaction-nudge)));
+}

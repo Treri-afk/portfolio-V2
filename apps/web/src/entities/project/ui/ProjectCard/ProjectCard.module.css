@@ -1,0 +1,27 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.card {
+  position: relative;
+  display: grid;
+  gap: var(--card-gap);
+  align-content: start;
+}
+
+.link {
+  text-decoration: none;
+}
+
+@media (--hover) {
+  .card:hover .link {
+    color: var(--color-text-accent);
+  }
+}
+
+.card:focus-within {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+
+.card .link:focus-visible {
+  outline: none;
+}

@@ -1,0 +1,37 @@
+@import '@portfolio/tokens/custom-media.css';
+
+.list {
+  display: grid;
+  gap: var(--layout-gap-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+
+  @media (--bp-md) {
+    grid-template-columns: var(--layout-columns-two);
+  }
+
+  @media (--bp-xl) {
+    grid-template-columns: var(--layout-columns-four);
+  }
+}
+
+.item {
+  --accent-bar-weight: var(--layout-border-strong);
+
+  display: grid;
+  gap: var(--layout-gap-sm);
+  align-content: start;
+  padding-block-start: var(--layout-gap-md);
+  border-block-start: var(--accent-bar-weight) solid var(--color-line-rule);
+  counter-increment: step;
+}
+
+.item::before {
+  color: var(--color-text-accent);
+  font-family: var(--text-mono-family);
+  font-size: var(--text-mono-size);
+  content: counter(step, decimal-leading-zero);
+}
+

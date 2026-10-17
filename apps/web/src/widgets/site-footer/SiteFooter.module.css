@@ -1,0 +1,5 @@
+.inner {
+  display: grid;
+  gap: var(--layout-gap-lg);
+}
+

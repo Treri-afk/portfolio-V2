@@ -1,0 +1,31 @@
+# Technology catalog. Projects reference these entries by slug.
+- { slug: react, name: React, category: frontend }
+- { slug: nextjs, name: Next.js, category: frontend }
+- { slug: vite, name: Vite, category: frontend }
+- { slug: react-router, name: React Router, category: frontend }
+- { slug: typescript, name: TypeScript, category: frontend }
+- { slug: motion, name: Motion, category: frontend }
+- { slug: tailwind, name: Tailwind CSS, category: design }
+- { slug: sass, name: Sass, category: design }
+- { slug: style-dictionary, name: Style Dictionary, category: design }
+- { slug: electron, name: Electron, category: frontend }
+- { slug: threejs, name: Three.js, category: frontend }
+- { slug: flutter, name: Flutter, category: frontend }
+- { slug: godot, name: Godot, category: frontend }
+- { slug: nodejs, name: Node.js, category: backend }
+- { slug: express, name: Express, category: backend }
+- { slug: php, name: PHP, category: backend }
+- { slug: wordpress, name: WordPress, category: backend }
+- { slug: webrtc, name: WebRTC, category: backend }
+- { slug: stripe, name: Stripe, category: backend }
+- { slug: zod, name: Zod, category: backend }
+- { slug: n8n, name: n8n, category: backend }
+- { slug: supabase, name: Supabase, category: data }
+- { slug: postgresql, name: PostgreSQL, category: data }
+- { slug: mysql, name: MySQL, category: data }
+- { slug: sqlite, name: SQLite, category: data }
+- { slug: prisma, name: Prisma, category: data }
+- { slug: drizzle, name: Drizzle ORM, category: data }
+- { slug: docker, name: Docker, category: devops }
+- { slug: nginx, name: Nginx, category: devops }
+- { slug: github-actions, name: GitHub Actions, category: devops }

@@ -1,0 +1,23 @@
+/* Page transition: the new page wipes in behind a slanted edge, same angle language as the slices. */
+@keyframes page-wipe {
+  from {
+    clip-path: polygon(0 0, 0 0, calc(0% - var(--page-transition-skew)) 100%, 0 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0, calc(100% + var(--page-transition-skew)) 0, 100% 100%, 0 100%);
+  }
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation: page-wipe var(--motion-page-duration) var(--motion-page-easing) both;
+}
+
+::view-transition-group(*) {
+  animation-duration: var(--motion-page-duration);
+  animation-timing-function: var(--motion-page-easing);
+}

@@ -1,0 +1,16 @@
+.notice {
+  margin: 0;
+  padding: var(--notice-padding);
+  border-inline-start: var(--notice-rule) solid var(--color-line-strong);
+  background: var(--color-surface-raised);
+  font-family: var(--text-small-family);
+  font-size: var(--text-small-size);
+}
+
+.notice[data-tone='success'] {
+  border-color: var(--color-state-success);
+}
+
+.notice[data-tone='danger'] {
+  border-color: var(--color-state-danger);
+}

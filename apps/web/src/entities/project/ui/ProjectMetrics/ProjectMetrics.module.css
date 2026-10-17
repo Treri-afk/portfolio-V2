@@ -1,0 +1,8 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--metric-min)), 1fr));
+  gap: var(--layout-gap-lg) var(--layout-gap-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

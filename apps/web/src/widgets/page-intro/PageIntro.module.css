@@ -1,0 +1,3 @@
+.lead {
+  max-inline-size: var(--layout-measure);
+}

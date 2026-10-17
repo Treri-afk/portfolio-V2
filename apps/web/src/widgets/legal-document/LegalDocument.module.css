@@ -1,0 +1,9 @@
+.document :global(h2) {
+  margin-block-start: var(--layout-gap-xl);
+  color: var(--color-text-primary);
+  font-family: var(--text-heading-m-family);
+  font-size: var(--text-heading-m-size);
+  font-weight: var(--text-heading-m-weight);
+  font-stretch: var(--text-heading-m-stretch);
+  line-height: var(--text-heading-m-leading);
+}

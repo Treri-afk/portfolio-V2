@@ -1,0 +1,87 @@
+/* Shared look of every call to action, whether it is a <button> (Button) or a link (Link). */
+.action {
+  display: inline-flex;
+  gap: var(--button-gap);
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--button-height);
+  padding-inline: var(--button-padding-inline);
+  border: var(--button-border) solid var(--color-line-rule);
+  border-radius: var(--layout-radius);
+  font-family: var(--text-mono-family);
+  font-size: var(--text-mono-size);
+  font-weight: var(--button-weight);
+  letter-spacing: var(--text-eyebrow-tracking);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform var(--motion-hover-duration) var(--motion-hover-easing);
+}
+
+/* Hover lifts, press pushes down: transform only, colors switch instantly. */
+.action:hover,
+.action[data-hovered] {
+  transform: translateY(calc(0% - var(--button-lift)));
+}
+
+.action:active,
+.action[data-pressed] {
+  transform: translateY(var(--button-press-shift));
+  transition-duration: var(--motion-press-duration);
+}
+
+.action[aria-disabled='true'] {
+  opacity: var(--layout-opacity-disabled);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.action :global([data-icon]) {
+  transition: transform var(--motion-hover-duration) var(--motion-hover-easing);
+}
+
+.action:hover :global([data-icon='arrow-right']),
+.action[data-hovered] :global([data-icon='arrow-right']) {
+  transform: translateX(var(--interaction-nudge));
+}
+
+.action[data-variant='primary'] {
+  border-color: var(--color-accent-default);
+  background: var(--color-accent-default);
+  color: var(--color-text-on-accent);
+}
+
+.action[data-variant='primary']:hover,
+.action[data-variant='primary'][data-hovered] {
+  border-color: var(--color-accent-hover);
+  background: var(--color-accent-hover);
+}
+
+.action[data-variant='secondary'] {
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+.action[data-variant='secondary']:hover,
+.action[data-variant='secondary'][data-hovered] {
+  background: var(--color-text-primary);
+  color: var(--color-surface-base);
+}
+
+.action[data-variant='ghost'] {
+  border-color: transparent;
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+.action[data-variant='ghost']:hover,
+.action[data-variant='ghost'][data-hovered] {
+  border-color: var(--color-line-strong);
+  transform: none;
+}
+
+/* Ghost buttons hold a single icon (theme toggle): it grows slightly instead of the button lifting. */
+.action[data-variant='ghost']:hover :global([data-icon]),
+.action[data-variant='ghost'][data-hovered] :global([data-icon]) {
+  transform: scale(var(--interaction-icon-zoom));
+}

@@ -1,0 +1,35 @@
+.prose {
+  max-inline-size: var(--layout-measure);
+  color: var(--color-text-secondary);
+  font-family: var(--text-body-family);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-leading);
+}
+
+.prose > * {
+  margin: 0;
+}
+
+.prose > * + * {
+  margin-block-start: var(--layout-gap-md);
+}
+
+.prose ul {
+  display: grid;
+  gap: var(--layout-gap-sm);
+  padding-inline-start: var(--layout-gap-md);
+}
+
+.prose li::marker {
+  color: var(--color-text-accent);
+}
+
+.prose strong {
+  color: var(--color-text-primary);
+  font-weight: var(--text-heading-m-weight);
+}
+
+.prose code {
+  font-family: var(--text-mono-family);
+  font-size: var(--text-mono-size);
+}

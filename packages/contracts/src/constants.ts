@@ -8,6 +8,10 @@ export const technologyCategories = ['frontend', 'backend', 'data', 'devops', 'd
 
 export const sectionKinds = ['context', 'problem', 'role', 'approach', 'architecture', 'results', 'learnings'] as const;
 
+/** POST /v1/contact answers 202 when the message is sent; errors carry one of these codes. */
+export const contactAccepted = 202;
+export type ContactError = 'invalid' | 'forbidden' | 'unsupported_media_type' | 'rate_limited' | 'unavailable';
+
 export const contactLimits = {
   name: { max: 120 },
   email: { max: 254 },

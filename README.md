@@ -35,6 +35,7 @@ portfolio V2/
 │     ├─ features/               interactions : filtre par techno, contact, thème
 │     ├─ entities/               modèle métier : project, technology
 │     └─ shared/                 ui (design system), lib, api, config, content (textes et Markdown)
+├─ apps/api/                     Hono · formulaire de contact → e-mail (Gmail SMTP)
 ├─ packages/tokens/              tokens DTCG → tokens.css, custom-media.css, media.ts, favicon.svg
 ├─ packages/contracts/           schémas Zod et types partagés (web, puis API)
 └─ docs/adr/                     décisions d'architecture
@@ -102,6 +103,7 @@ Le développement est assisté par l'IA (Claude Code), avec un cadre écrit avan
 | Commande | Rôle |
 |---|---|
 | `npm run dev` | tokens, images, puis serveur de développement (variables validées au démarrage) |
+| `npm run dev:api` | API de contact en local (copier `apps/api/.env.example` en `.env`) |
 | `npm run build` | build de production et pré-rendu |
 | `npm run preview` | sert le build (tester les pages avec un `/` final) |
 | `npm run tokens:build` | compile les tokens |
@@ -114,9 +116,9 @@ Le développement est assisté par l'IA (Claude Code), avec un cadre écrit avan
 
 | Fait | À venir |
 |---|---|
-| Design system, pages, études de cas, pages légales | API Hono + PostgreSQL pour le formulaire de contact |
+| Design system, pages, études de cas, pages légales, API de contact (Hono → Gmail) | Mise en ligne sur VPS (nginx) |
 | Pré-rendu, SEO, thèmes clair et sombre | Tests Playwright + axe, Lighthouse CI |
-| Passe de performance, lint bloquant, tests Vitest, CI | Docker, mise en ligne |
+| Passe de performance, lint bloquant, tests Vitest, CI | Docker, PostgreSQL |
 
 ## Contenus
 

@@ -29,7 +29,7 @@ Les messages sont conservés douze mois après le dernier échange, puis supprim
 
 ## Destinataires
 
-Vos données ne sont lues que par moi. L'hébergeur du site les stocke en tant que sous-traitant technique. Elles ne sont ni vendues, ni cédées, ni utilisées à des fins publicitaires.
+Vos données ne sont lues que par moi. Le message m'est transmis par e-mail et conservé dans ma messagerie Gmail : Google (Google Ireland Ltd) l'héberge en tant que sous-traitant ; des transferts vers les États-Unis peuvent avoir lieu, encadrés par le Data Privacy Framework. L'hébergeur du site ne fait que relayer le message, sans le conserver. Elles ne sont ni vendues, ni cédées, ni utilisées à des fins publicitaires.
 
 ## Stockage local
 

@@ -17,19 +17,19 @@
     "sizes": {
       "full": {
         "$type": "other",
-        "$value": "100vw"
+        "$value": "{image.span.full}"
       },
       "half": {
         "$type": "other",
-        "$value": "(width >= {breakpoint.md}) 50vw, 100vw"
+        "$value": "(width >= {breakpoint.md}) {image.span.half}, {image.span.full}"
       },
       "third": {
         "$type": "other",
-        "$value": "(width >= {breakpoint.lg}) 33vw, (width >= {breakpoint.sm}) 50vw, 100vw"
+        "$value": "(width >= {breakpoint.lg}) {image.span.third}, (width >= {breakpoint.sm}) {image.span.half}, {image.span.full}"
       },
       "quarter": {
         "$type": "other",
-        "$value": "(width >= {breakpoint.lg}) 25vw, 50vw"
+        "$value": "(width >= {breakpoint.lg}) {image.span.quarter}, {image.span.half}"
       }
     }
   }

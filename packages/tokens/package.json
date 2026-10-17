@@ -10,7 +10,8 @@
     "./favicon.svg": "./dist/favicon.svg"
   },
   "scripts": {
-    "build": "node build/build.mjs"
+    "build": "node build/build.mjs",
+    "typecheck": "tsc -p tsconfig.json"
   },
   "devDependencies": {
     "style-dictionary": "5.7.0"

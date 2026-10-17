@@ -39,10 +39,3 @@
   justify-self: end;
 }
 
-.list {
-  display: flex;
-  gap: var(--layout-gap-lg);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}

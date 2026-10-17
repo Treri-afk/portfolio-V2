@@ -4,6 +4,7 @@ import { Container, Icon, Link, SectionHeading, Slice, Stack } from '../../share
 import { FeaturedProject } from './FeaturedProject.tsx';
 
 const TITLE_ID = 'projets-phares';
+const ALTERNATE_EVERY = 2;
 
 export function FeaturedProjects({ projects }: { projects: readonly ProjectCardData[] }) {
   return (
@@ -12,7 +13,7 @@ export function FeaturedProjects({ projects }: { projects: readonly ProjectCardD
         <Stack gap="2xl" align="start">
           <SectionHeading eyebrow={featured.eyebrow} title={featured.title} id={TITLE_ID} />
           {projects.map((project, index) => (
-            <FeaturedProject key={project.slug} project={project} side={index % 2 === 0 ? 'start' : 'end'} />
+            <FeaturedProject key={project.slug} project={project} side={index % ALTERNATE_EVERY === 0 ? 'start' : 'end'} />
           ))}
           <Link to="/projets" variant="secondary">{featured.allProjects}<Icon name="arrow-right" /></Link>
         </Stack>

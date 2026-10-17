@@ -13,3 +13,9 @@ export const contactLimits = {
   email: { max: 254 },
   message: { min: 10, max: 5000 },
 } as const;
+
+/** Lengths of the challenge and decision lines (featured blocks and case studies). */
+export const decisionLimits = { challenge: 140, decision: 220 } as const;
+
+/** Focal point of a cropped image, in percent of its width and height. */
+export const focalPoint = { min: 0, max: 100, center: 50 } as const;

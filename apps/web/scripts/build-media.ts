@@ -11,25 +11,34 @@ const ORIGINAL = /^[a-z0-9-]+\.(jpg|png)$/;
 const VARIANT = /-\d+\.(avif|webp)$/;
 const FORMATS = { avif: { quality: 55, effort: 4 }, webp: { quality: 74 } } as const;
 
-const isStale = async (source: string, target: string): Promise<boolean> => {
-  const [from, to] = await Promise.all([stat(source), stat(target).catch(() => null)]);
+interface Task {
+  source: string;
+  output: string;
+  width: number;
+  format: keyof typeof FORMATS;
+}
+
+const isStale = async ({ source, output }: Task): Promise<boolean> => {
+  const [from, to] = await Promise.all([stat(source), stat(output).catch(() => null)]);
   return to === null || to.mtimeMs < from.mtimeMs;
 };
 
+const tasksFor = async (source: string): Promise<Task[]> => {
+  const { width } = await sharp(source).metadata();
+  return variantWidths(width).flatMap((target) =>
+    (['avif', 'webp'] as const).map((format) => ({ source, width: target, format, output: source.replace(/\.(jpg|png)$/, `-${String(target)}.${format}`) })),
+  );
+};
+
 const originals = (await readdir(ROOT, { recursive: true }))
-  .filter((file) => !VARIANT.test(file) && ORIGINAL.test(file.split('/').pop() ?? ''));
+  .filter((file) => !VARIANT.test(file) && ORIGINAL.test(file.split('/').pop() ?? ''))
+  .map((file) => join(ROOT, file));
+const tasks = (await Promise.all(originals.map(tasksFor))).flat();
 
 let built = 0;
-for (const file of originals) {
-  const source = join(ROOT, file);
-  const { width = 0 } = await sharp(source).metadata();
-  for (const target of variantWidths(width)) {
-    for (const format of ['avif', 'webp'] as const) {
-      const output = source.replace(/\.(jpg|png)$/, `-${String(target)}.${format}`);
-      if (!(await isStale(source, output))) continue;
-      await sharp(source).resize({ width: target }).toFormat(format, FORMATS[format]).toFile(output);
-      built += 1;
-    }
-  }
+for (const task of tasks) {
+  if (!(await isStale(task))) continue;
+  await sharp(task.source).resize({ width: task.width }).toFormat(task.format, FORMATS[task.format]).toFile(task.output);
+  built += 1;
 }
 console.log(`media: ${String(originals.length)} originals, ${String(built)} variants built`);

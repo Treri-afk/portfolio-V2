@@ -72,6 +72,7 @@ Le détail des arbitrages est dans [`docs/adr/`](docs/adr).
 
 - **Trois niveaux de tokens** : primitifs (`color.neutral.950`), sémantiques (`color.text.primary`), composants (`button.height`). Les composants ne lisent jamais les primitifs.
 - **Contraste AA** mesuré pour chaque paire texte/surface, dans les deux thèmes (test Vitest).
+- **Jamais de noir ni de blanc purs** : sombres et clairs sont des neutres légèrement chauds (le plus sombre, `oklch(0.13 …)`, environ `#090807`). Un test Vitest refuse tout token à `#000` ou `#fff`.
 - **Angles** bornés entre 2° et 20°, jamais à 45° ni à l'un de ses multiples. Un seul composant découpe la page (`Slice`), un seul trace un trait incliné (`SlantRule`) ; le volet de transition de page est l'exception documentée dans l'ADR 0005.
 - **Mouvement** limité à `transform`, `opacity` et `clip-path`. Les durées passent à zéro quand l'utilisateur réduit les animations, directement dans les tokens.
 - Inventaire des composants : [`apps/web/src/shared/ui/README.md`](apps/web/src/shared/ui/README.md).

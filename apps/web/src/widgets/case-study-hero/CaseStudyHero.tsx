@@ -4,7 +4,7 @@ import styles from './CaseStudyHero.module.css';
 
 export function CaseStudyHero({ project }: { project: ProjectDetail }) {
   return (
-    <Slice as="header" angleBottom="rise-base" elevated>
+    <Slice as="header" angleBottom="rise-base" compactTop>
       <Container size="wide" className={styles.grid}>
         <Stack gap="lg">
           <Eyebrow>{projectKicker(project)}</Eyebrow>
@@ -12,9 +12,7 @@ export function CaseStudyHero({ project }: { project: ProjectDetail }) {
           <Text variant="lead">{project.tagline}</Text>
           <Text tone="secondary">{project.summary}</Text>
         </Stack>
-        <div className={styles.visual}>
-          <ProjectCover title={project.title} cover={coverOf(project)} ratio="square" sizes="half" priority transitionName={projectTransitionName(project.slug)} />
-        </div>
+        <ProjectCover title={project.title} cover={coverOf(project)} ratio="square" sizes="half" priority transitionName={projectTransitionName(project.slug)} />
       </Container>
     </Slice>
   );

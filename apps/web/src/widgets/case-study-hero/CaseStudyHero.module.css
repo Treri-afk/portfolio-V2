@@ -1,15 +1,12 @@
 @import '@portfolio/tokens/custom-media.css';
 
+/* Text and visual centered on each other: the visual stays inside the slice, clear of the slanted edge. */
 .grid {
   display: grid;
   gap: var(--layout-gap-xl);
-  align-items: end;
+  align-items: center;
 
   @media (--bp-lg) {
     grid-template-columns: var(--layout-columns-two);
   }
-}
-
-.visual {
-  margin-block-end: calc(0% - var(--layout-section));
 }

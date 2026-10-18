@@ -7,7 +7,7 @@ Une ligne par composant. Avant d'en créer un : chercher ici, puis ajouter une v
 | Container | largeur max et gouttières | `size` : text · content · wide |
 | Stack | empilement ou ligne à espacement tokenisé (aussi en `ul`) | `direction`, `gap`, `align` : start · center, `wrap` |
 | Grid | grille responsive | `variant` : cards · split · pillars |
-| Slice | seule découpe inclinée de la page (`clip-path` + `tan()`) | `tone` : base · sunken · inverse ; `angleTop`, `angleBottom`, `elevated` |
+| Slice | seule découpe inclinée de la page (`clip-path` + `tan()`) | `tone` : base · sunken · inverse ; `angleTop`, `angleBottom`, `compactTop`, `elevated` |
 | Text | tout texte : famille, taille, graisse, largeur, interlignage, approche | `variant` (display-xl → eyebrow), `tone` |
 | Heading | titre ; niveau sémantique découplé de la taille | `level` 1–4 (`SubHeadingLevel` 2–4 pour les composants internes), `size` |
 | Eyebrow | surtitre mono en capitales | `tone` |

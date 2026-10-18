@@ -7,6 +7,10 @@
     "page-inline": {
       "$type": "dimension",
       "$value": "{layout.page-inline}"
+    },
+    "padding-compact": {
+      "$type": "dimension",
+      "$value": "{layout.gap.xl}"
     }
   },
   "slant-rule": {

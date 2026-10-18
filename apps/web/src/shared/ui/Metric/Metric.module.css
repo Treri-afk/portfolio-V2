@@ -1,3 +1,5 @@
+@import '@portfolio/tokens/custom-media.css';
+
 .metric {
   display: grid;
   gap: var(--metric-gap);
@@ -15,10 +17,6 @@
   font-stretch: var(--text-display-m-stretch);
   line-height: var(--text-display-m-leading);
   font-variant-numeric: tabular-nums;
-}
-
-.metric[data-size='lg'] .value {
-  font-size: var(--text-display-m-size);
 }
 
 .unit {
@@ -39,4 +37,32 @@
   font-family: var(--text-eyebrow-family);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-leading);
+}
+
+/*
+ * Large size: a row per metric. Inside a two-column grid parent, it follows the parent's columns (subgrid):
+ * the value takes the first one and never wraps; label and source stack in the second. Alone, one column.
+ */
+.metric[data-size='lg'] {
+  padding-block: var(--layout-gap-md);
+
+  @media (--bp-md) {
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    align-items: baseline;
+  }
+}
+
+.metric[data-size='lg'] .value {
+  font-size: var(--text-display-m-size);
+  white-space: nowrap;
+
+  @media (--bp-md) {
+    grid-row: span 2;
+  }
+}
+
+.metric[data-size='lg'] .label,
+.metric[data-size='lg'] .source {
+  grid-column: -2;
 }

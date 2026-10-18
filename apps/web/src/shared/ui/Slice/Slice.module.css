@@ -44,6 +44,10 @@
   --_bottom-end: max(0%, calc(0% - var(--_bottom-rise)));
 }
 
+.slice[data-compact-top] {
+  padding-block-start: calc(var(--slice-padding-compact) + var(--_top-start) + var(--_top-end));
+}
+
 .slice[data-elevated] {
   z-index: var(--layout-z-overlap);
 }

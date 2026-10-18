@@ -1,3 +1,5 @@
+@import '@portfolio/tokens/custom-media.css';
+
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--metric-min)), 1fr));
@@ -5,4 +7,23 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* Large figures (case study): one row per metric, values aligned in a column as wide as the widest one. */
+.list[data-size='lg'] {
+  grid-template-columns: 1fr;
+  gap: 0;
+
+  @media (--bp-md) {
+    grid-template-columns: max-content 1fr;
+    column-gap: var(--layout-gap-xl);
+  }
+}
+
+.list[data-size='lg'] > li {
+  @media (--bp-md) {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+  }
 }

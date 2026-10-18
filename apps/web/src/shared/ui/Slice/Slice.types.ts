@@ -10,6 +10,8 @@ export interface SliceProps {
   tone?: SliceTone | undefined;
   angleTop?: SliceAngle | undefined;
   angleBottom?: SliceAngle | undefined;
+  /** Smaller top padding: the first slice of a page, right under the site header. */
+  compactTop?: boolean | undefined;
   /** Lets content (a visual) overflow onto the next slice. */
   elevated?: boolean | undefined;
   labelledBy?: string | undefined;
